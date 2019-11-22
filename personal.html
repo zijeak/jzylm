@@ -139,13 +139,6 @@
 	   	margin-top:20px;
 
 	   }
-	   .main > .content > .group-icon{
-	   	display:inline-block;
-	   }
-	   .main > .content > .group-icon img{
-	   	width:150px;
-	   	margin: 50px;
-	   }
 	   .main > .content > .info{
 	   	width:600px;
 	   	margin: 60px;
@@ -156,14 +149,62 @@
 	   .main > .content > .info td{
 	   	padding: 0px;
 	   }
+	   .main > .content > .title-text{
+	   	font-size: 17px;
+	   	color:#7D7D7D;
+	   	display: inline-block;
+	   	margin-top:40px;
+	   	margin-left:40px;
+	   	margin-bottom: 10px;
+	   	margin-right:5px;
+	   }
+	   .main > .content > .sep-line{
+	   	
+	   	margin-left: 40px;
+	   	margin-right: 20px;
+	   	margin-top: 5px;
+	   }
+	   .main > .content > .my-group{
+	   	width:100%;
+	   	height:35%;
+	   }
+	   .group-icon{
+	   	display:inline-block;
+	   }
+	   .group-icon img{
+	   	width:150px;
+	   	margin-top: 20px;
+	   	margin-left: 40px;
+	   }
+	   .main > .content > .my-group > .group-icon > .group-name{
+	   	display: block;
+	   	font-size: 16px;
+	   	margin-left: 40px;
+	   	text-align: center;
+	   	margin-top: 5px;
+	   }
+	   .more{
+	   	background-color: white;
+	   	border:none;
+	   }
+	   .more > img{
+	   	width:18px;
+	   	height:18px;
+	   	display:block;
+	   }
 	</style>
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$("#homework").click(function(){
-				var group = "<div class='group-icon'><img src='icons/hw.png'/></div>";
+			$("#group").click(function(){
+				var group = "<div class='group-icon'><img src='icons/gp.png'/></div>";
 				$(".content").empty();
           		$(".content").append(group); 
+          	});
+			$("#homework").click(function(){
+				var homework = "<div class='group-icon'><img src='icons/hw.png'/></div>";
+				$(".content").empty();
+          		$(".content").append(homework); 
           	}); 
           	$("#info").click(function(){
           		var info = "<table class='info' border='1' cellspacing='0' cellpadding='0'><tr rowspan='2' height=50px><td width=200px>个人信息</td></tr><tr><td>姓名</td><td>西小北</td></tr><tr><td>学号</td><td>2017118118</td></tr><tr><td>性别</td><td>男</td></tr><tr><td>学院</td><td>信息科学与技术学院</td></tr><tr><td>邮箱</td><td>xxb@stumail.nwu.edu.cn</td></tr><tr><td>手机</td><td>1008611</td></tr></table>";
@@ -239,6 +280,28 @@
 					<td>1008611</td>
 				</tr>
 			</table> -->
+			<label class='title-text'>我创建的组</label>
+			<button class='more'><img src='icons/more.png'/></button>
+			<hr class='sep-line'/>
+			<div class="my-group">
+				<div class='group-icon'>
+					<img src='icons/gp.png'/>
+					<label class='group-name'>2017级软件工程4班</label>
+				</div>
+				<div class='group-icon'>
+					<img src='icons/gp.png'/>
+					<label class='group-name'>2017级软件工程3班</label>
+				</div>
+			</div>
+			<label class='title-text'>我加入的组</label>
+			<button class='more'><img src='icons/more.png'/></button>
+			<hr class='sep-line'/>
+			<div class='my-group'>
+				<div class='group-icon'>
+					<img src='icons/gp.png'/>
+					<label class='group-name'>生物工程2017级班</label>
+				</div>
+			</div>
 
 		</div>
 	</section>
